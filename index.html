@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation | Dr. Mamta & Er. Ankit</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        warmCream: '#FAF6F0',
+                        creamWhite: '#FFFDF9',
+                        softBeige: '#F4EBE1',
+                        royalMaroon: '#5A0E1A',
+                        deepBurgundy: '#7A0016',
+                        goldAccent: '#D4AF37',
+                        richGold: '#C5A059',
+                        lightGold: '#FBF5B7'
+                    },
+                    fontFamily: {
+                        script: ['"Great Vibes"', 'cursive'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        cinzel: ['"Cinzel Decorative"', 'serif'],
+                        sans: ['"Montserrat"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* High-Visibility Luxury Gold Gradient Text */
+        .gold-gradient-text {
+            background: linear-gradient(135deg, #7A541C 0%, #B38728 35%, #D4AF37 60%, #946924 85%, #593E11 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Cream & Gold Radial Pattern Background */
+        .cream-gold-bg {
+            background-color: #FAF6F0;
+            background-image: radial-gradient(#C5A059 0.75px, transparent 0.75px), radial-gradient(#C5A059 0.75px, #FAF6F0 0.75px);
+            background-size: 36px 36px;
+            background-position: 0 0, 18px 18px;
+        }
+
+        /* Floating music button pulse animation */
+        @keyframes pulse-gold {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.7); }
+            50% { box-shadow: 0 0 0 16px rgba(197, 160, 89, 0); }
+        }
+        .music-pulse {
+            animation: pulse-gold 2.5s infinite;
+        }
+
+        @keyframes rotate-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .rotate-slow {
+            animation: rotate-slow 60s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-warmCream text-gray-800 font-sans selection:bg-richGold selection:text-white overflow-x-hidden cream-gold-bg">
+
+    <!-- Audio Player (Soft Wedding Flute Instrumental) -->
+    <audio id="weddingMusic" loop preload="auto">
+        <source src="https://cdn.pixabay.com/download/audio/2022/05/27/audio_1808fbf07a.mp3?filename=indian-wedding-flute-113579.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Floating Audio Control Toggle -->
+    <button id="musicToggleBtn" class="fixed bottom-5 right-5 z-50 bg-royalMaroon text-lightGold border-2 border-goldAccent p-3.5 sm:p-4 rounded-full shadow-2xl music-pulse flex items-center justify-center transition-transform hover:scale-110 active:scale-95" title="Play / Pause Wedding Flute Music">
+        <i id="musicIcon" class="fas fa-music text-lg sm:text-xl"></i>
+    </button>
+
+    <!-- Main Outer Wrapper: Mobile Optimized Margins and Borders -->
+    <div class="w-full max-w-4xl mx-auto shadow-2xl bg-creamWhite my-0 sm:my-8 rounded-none sm:rounded-3xl overflow-hidden border-0 sm:border-[8px] border-richGold/40">
+
+        <!-- Top Header & Hero Banner Section (Bride First) -->
+        <header class="relative min-h-[90vh] sm:min-h-screen bg-gradient-to-b from-creamWhite via-softBeige/70 to-warmCream text-royalMaroon flex flex-col justify-between items-center text-center px-4 py-8 sm:p-12 overflow-hidden border-b-2 border-richGold/30">
+            
+            <!-- Subtle Gold Mandala Watermark Background -->
+            <div class="absolute inset-0 flex items-center justify-center opacity-[0.07] pointer-events-none">
+                <svg class="w-[500px] h-[500px] sm:w-[750px] sm:h-[750px] text-richGold rotate-slow" viewBox="0 0 100 100" fill="currentColor">
+                    <circle cx="50" cy="50" r="45" stroke="currentColor" stroke-width="0.5" fill="none" />
+                    <circle cx="50" cy="50" r="35" stroke="currentColor" stroke-width="0.5" stroke-dasharray="2,2" fill="none" />
+                    <path d="M50 5 L55 25 L75 25 L60 38 L65 58 L50 45 L35 58 L40 38 L25 25 L45 25 Z"/>
+                    <path d="M50 95 L55 75 L75 75 L60 62 L65 42 L50 55 L35 42 L40 62 L25 75 L45 75 Z"/>
+                </svg>
+            </div>
+
+            <!-- Artistic Lord Ganesha Artwork & Mantra -->
+            <div class="z-10 mt-2 sm:mt-4 flex flex-col items-center">
+                <div class="w-20 h-20 sm:w-28 sm:h-28 text-richGold mb-2 flex items-center justify-center drop-shadow">
+                    <svg viewBox="0 0 100 100" class="w-full h-full fill-current">
+                        <path d="M50,10 C45,10 40,15 40,22 C40,25 41,27 43,29 C37,30 30,35 30,45 C30,55 37,60 42,62 C38,65 32,70 32,77 C32,87 40,92 50,92 C60,92 68,87 68,77 C68,70 62,65 58,62 C63,60 70,55 70,45 C70,35 63,30 57,29 C59,27 60,25 60,22 C60,15 55,10 50,10 Z M50,16 C53,16 55,18 55,21 C55,24 53,26 50,26 C47,26 45,24 45,21 C45,18 47,16 50,16 Z M40,38 C40,38 48,36 50,42 C52,48 45,55 50,56 C53,56 55,52 57,48 C58,45 60,38 60,38 C64,42 65,48 64,52 C61,56 55,59 55,64 C55,67 58,70 58,74 C58,80 54,84 50,84 C46,84 42,80 42,74 C42,68 47,65 47,60 C42,58 36,52 36,45 C36,41 38,39 40,38 Z" />
+                        <path d="M48,27 L52,27 L52,34 L48,34 Z" fill="#7A0016"/>
+                        <circle cx="50" cy="36" r="1.5" fill="#7A0016"/>
+                    </svg>
+                </div>
+
+                <p class="font-cinzel text-[11px] sm:text-sm font-bold tracking-[0.2em] sm:tracking-[0.25em] text-royalMaroon uppercase border-b border-richGold/50 pb-1">
+                    ॥ श्री गणेशाय नमः ॥
+                </p>
+                <p class="font-serif italic text-xs sm:text-sm text-gray-600 mt-2">Together with our families, we cordially invite you to celebrate the wedding of</p>
+            </div>
+
+            <!-- Couple Names & Professions (Bride First) -->
+            <div class="z-10 my-auto py-4 sm:py-6 w-full">
+                <!-- Bride Card Highlight -->
+                <div class="inline-block px-2 sm:px-4 py-1">
+                    <h1 class="font-script text-6xl sm:text-8xl lg:text-9xl gold-gradient-text drop-shadow-sm py-1">
+                        Dr. Mamta
+                    </h1>
+                    <div class="inline-flex items-center gap-1.5 sm:gap-2 bg-warmCream border border-richGold/40 px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm text-royalMaroon font-medium shadow-sm mt-1">
+                        <i class="fas fa-user-md text-richGold text-sm sm:text-base"></i>
+                        <span>Doctor</span>
+                    </div>
+                </div>
+
+                <!-- Ampersand Divider -->
+                <div class="flex items-center justify-center my-3 sm:my-4 gap-3 sm:gap-4">
+                    <span class="h-[1px] w-12 sm:w-32 bg-gradient-to-r from-transparent via-richGold to-transparent"></span>
+                    <span class="font-script text-3xl sm:text-5xl text-richGold italic">&</span>
+                    <span class="h-[1px] w-12 sm:w-32 bg-gradient-to-l from-transparent via-richGold to-transparent"></span>
+                </div>
+
+                <!-- Groom Card Highlight -->
+                <div class="inline-block px-2 sm:px-4 py-1">
+                    <h1 class="font-script text-6xl sm:text-8xl lg:text-9xl gold-gradient-text drop-shadow-sm py-1">
+                        Er. Ankit
+                    </h1>
+                    <div class="inline-flex items-center gap-1.5 sm:gap-2 bg-warmCream border border-richGold/40 px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm text-royalMaroon font-medium shadow-sm mt-1">
+                        <i class="fas fa-laptop-code text-richGold text-sm sm:text-base"></i>
+                        <span>Software Engineer</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wedding Date Badge & Scroll Pointer -->
+            <div class="z-10 mb-2 sm:mb-4 flex flex-col items-center w-full">
+                <div class="bg-warmCream border-2 border-richGold/60 px-6 sm:px-8 py-2.5 sm:py-3 rounded-full shadow-md mb-4 sm:mb-6">
+                    <p class="font-serif text-royalMaroon text-sm sm:text-xl tracking-wider sm:tracking-widest font-bold">
+                        <i class="far fa-calendar-alt text-richGold mr-2"></i> NOVEMBER 20, 2026
+                    </p>
+                    <p class="text-[11px] sm:text-xs text-gray-600 tracking-wider uppercase mt-0.5">Sirsi, Bahal, Bhiwani, Haryana</p>
+                </div>
+
+                <a href="#countdown" class="text-richGold hover:text-royalMaroon transition-colors animate-bounce p-2" aria-label="Scroll down">
+                    <i class="fas fa-chevron-down text-xl sm:text-2xl"></i>
+                </a>
+            </div>
+        </header>
+
+        <!-- Live Countdown Timer Section -->
+        <section id="countdown" class="py-10 sm:py-12 px-4 bg-gradient-to-r from-royalMaroon via-deepBurgundy to-royalMaroon text-lightGold border-b-2 border-richGold/40">
+            <div class="max-w-3xl mx-auto text-center">
+                <h3 class="font-cinzel text-[11px] sm:text-sm tracking-[0.15em] sm:tracking-[0.2em] text-lightGold uppercase mb-2">Counting Down To The Sacred Union</h3>
+                <div class="w-16 h-0.5 bg-goldAccent mx-auto mb-6 sm:mb-8"></div>
+
+                <div class="grid grid-cols-4 gap-2 sm:gap-6 max-w-xl mx-auto">
+                    <div class="bg-black/30 border border-goldAccent/40 rounded-xl sm:rounded-2xl p-2.5 sm:p-4 backdrop-blur-sm">
+                        <span id="days" class="block font-serif text-xl sm:text-5xl font-bold gold-gradient-text">00</span>
+                        <span class="text-[9px] sm:text-xs tracking-widest uppercase text-lightGold/90 mt-1 block">Days</span>
+                    </div>
+                    <div class="bg-black/30 border border-goldAccent/40 rounded-xl sm:rounded-2xl p-2.5 sm:p-4 backdrop-blur-sm">
+                        <span id="hours" class="block font-serif text-xl sm:text-5xl font-bold gold-gradient-text">00</span>
+                        <span class="text-[9px] sm:text-xs tracking-widest uppercase text-lightGold/90 mt-1 block">Hours</span>
+                    </div>
+                    <div class="bg-black/30 border border-goldAccent/40 rounded-xl sm:rounded-2xl p-2.5 sm:p-4 backdrop-blur-sm">
+                        <span id="minutes" class="block font-serif text-xl sm:text-5xl font-bold gold-gradient-text">00</span>
+                        <span class="text-[9px] sm:text-xs tracking-widest uppercase text-lightGold/90 mt-1 block">Minutes</span>
+                    </div>
+                    <div class="bg-black/30 border border-goldAccent/40 rounded-xl sm:rounded-2xl p-2.5 sm:p-4 backdrop-blur-sm">
+                        <span id="seconds" class="block font-serif text-xl sm:text-5xl font-bold gold-gradient-text">00</span>
+                        <span class="text-[9px] sm:text-xs tracking-widest uppercase text-lightGold/90 mt-1 block">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Parents & Family Blessings Section -->
+        <section class="py-12 sm:py-16 px-4 sm:px-6 bg-warmCream">
+            <div class="max-w-4xl mx-auto text-center">
+                <span class="font-cinzel text-xs text-richGold font-bold tracking-widest uppercase block mb-1">Family Honors</span>
+                <h3 class="font-script text-3xl sm:text-5xl text-royalMaroon">With Blessings Of Our Parents & Family</h3>
+                <p class="font-serif italic text-gray-600 text-xs sm:text-sm mt-2 mb-8 sm:mb-10">"May your love grow stronger each and every passing day."</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-10">
+                    <!-- Bride's Parents Card -->
+                    <div class="bg-creamWhite border border-richGold/40 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow relative overflow-hidden text-center group">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-softBeige border border-richGold/40 text-richGold flex items-center justify-center mx-auto mb-3 sm:mb-4 text-xl sm:text-2xl">
+                            <i class="fas fa-hand-holding-heart"></i>
+                        </div>
+                        <h4 class="font-cinzel text-xs tracking-widest uppercase text-richGold font-bold mb-1">Bride's Family</h4>
+                        <h5 class="font-serif text-xl sm:text-2xl text-royalMaroon font-bold mb-2">Dr. Mamta's Family</h5>
+                        
+                        <div class="bg-softBeige/60 border border-richGold/30 rounded-xl py-2 px-3 mb-4 inline-block">
+                            <p class="text-xs text-royalMaroon font-serif italic">
+                                "To find someone who will love you for no reason, and to pitch that tent of friendship, is the greatest blessing."
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 text-gray-700 font-medium text-sm sm:text-base">
+                            <p class="font-serif"><span class="text-[11px] sm:text-xs text-richGold uppercase tracking-wider block font-sans text-gray-400">Father</span> Shri Bharta Ram Ji</p>
+                            <p class="font-serif"><span class="text-[11px] sm:text-xs text-richGold uppercase tracking-wider block font-sans text-gray-400">Mother</span> Smt. Dhanpati Devi</p>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4 italic border-t border-gray-100 pt-3">Solicit your blessings & best wishes for their daughter.</p>
+                    </div>
+
+                    <!-- Groom's Parents Card -->
+                    <div class="bg-creamWhite border border-richGold/40 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-shadow relative overflow-hidden text-center group">
+                        <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-softBeige border border-richGold/40 text-richGold flex items-center justify-center mx-auto mb-3 sm:mb-4 text-xl sm:text-2xl">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h4 class="font-cinzel text-xs tracking-widest uppercase text-richGold font-bold mb-1">Groom's Family</h4>
+                        <h5 class="font-serif text-xl sm:text-2xl text-royalMaroon font-bold mb-2">Er. Ankit's Family</h5>
+                        
+                        <div class="bg-softBeige/60 border border-richGold/30 rounded-xl py-2 px-3 mb-4 inline-block">
+                            <p class="text-xs text-royalMaroon font-serif italic">
+                                "A successful marriage requires falling in love many times, always with the same person."
+                            </p>
+                        </div>
+
+                        <div class="space-y-2 text-gray-700 font-medium text-sm sm:text-base">
+                            <p class="font-serif"><span class="text-[11px] sm:text-xs text-richGold uppercase tracking-wider block font-sans text-gray-400">Father</span> Shri Shiv Kumar Ji</p>
+                            <p class="font-serif"><span class="text-[11px] sm:text-xs text-richGold uppercase tracking-wider block font-sans text-gray-400">Mother</span> Smt. Sumitra Devi</p>
+                        </div>
+                        <p class="text-xs text-gray-500 mt-4 italic border-t border-gray-100 pt-3">And family members.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Events Schedule / Timeline Section (Updated with 18th & 19th & 20th schedule) -->
+        <section id="events" class="py-12 sm:py-16 px-4 sm:px-6 bg-gradient-to-b from-warmCream via-softBeige/40 to-warmCream border-t border-b border-richGold/30">
+            <div class="max-w-3xl mx-auto text-center">
+                <span class="font-cinzel text-xs text-richGold font-bold tracking-widest uppercase block mb-1">Celebrations</span>
+                <h3 class="font-script text-3xl sm:text-5xl text-royalMaroon mb-2">Wedding Events & Timeline</h3>
+                <p class="font-serif italic text-gray-600 text-xs sm:text-sm mb-10 sm:mb-12">Please join us in celebrating these auspicious moments</p>
+
+                <div class="relative border-l-2 border-richGold/50 ml-3 sm:ml-28 space-y-8 sm:space-y-12 text-left">
+                    
+                    <!-- Ladies Sangeet & Mehendi (November 18) -->
+                    <div class="relative pl-6 sm:pl-8 group">
+                        <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-emerald-500 border-2 border-creamWhite shadow-md flex items-center justify-center text-xs text-white">
+                            <i class="fas fa-music text-[10px]"></i>
+                        </div>
+                        <div class="bg-creamWhite border border-richGold/40 rounded-2xl p-5 sm:p-6 shadow-md hover:shadow-lg transition-all">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-2">
+                                <h4 class="font-serif text-lg sm:text-xl font-bold text-royalMaroon">Ladies Sangeet & Mehendi</h4>
+                                <span class="bg-emerald-100 text-emerald-900 border border-emerald-300 px-3 py-1 rounded-full text-xs font-semibold self-start">
+                                    <i class="far fa-clock mr-1"></i> Evening Onwards
+                                </span>
+                            </div>
+                            <p class="text-xs sm:text-sm font-semibold text-richGold mb-2">
+                                <i class="far fa-calendar-alt mr-1"></i> Wednesday, 18th November 2026
+                            </p>
+                            <div class="flex items-center space-x-2 text-xs text-gray-700 bg-emerald-50 p-2 rounded-lg mb-2 border border-emerald-200">
+                                <span class="w-4 h-4 rounded-full bg-emerald-600 inline-block border border-white shadow flex-shrink-0"></span>
+                                <span class="font-medium">Dress Code: Vibrant Green / Ethnic</span>
+                            </div>
+                            <p class="text-xs text-gray-600 leading-relaxed">
+                                An evening of delicate henna art, traditional folk songs, dance performances, and cheerful music.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Lagan & Lunch (November 19, 11:15 AM onwards) -->
+                    <div class="relative pl-6 sm:pl-8 group">
+                        <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-amber-600 border-2 border-creamWhite shadow-md flex items-center justify-center text-xs text-white">
+                            <i class="fas fa-utensils text-[10px]"></i>
+                        </div>
+                        <div class="bg-creamWhite border border-richGold/40 rounded-2xl p-5 sm:p-6 shadow-md hover:shadow-lg transition-all">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-2">
+                                <h4 class="font-serif text-lg sm:text-xl font-bold text-royalMaroon">Lagan & Royal Feast (Lunch)</h4>
+                                <span class="bg-amber-100 text-amber-900 border border-amber-300 px-3 py-1 rounded-full text-xs font-semibold self-start">
+                                    <i class="far fa-clock mr-1"></i> 11:15 AM Onwards
+                                </span>
+                            </div>
+                            <p class="text-xs sm:text-sm font-semibold text-richGold mb-2">
+                                <i class="far fa-calendar-alt mr-1"></i> Thursday, 19th November 2026
+                            </p>
+                            <p class="text-xs text-gray-600 leading-relaxed">
+                                A joyous celebration of rituals, music, and lunch starting from 11:15 AM onwards with family and friends.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Grand Wedding Ceremony, Lunch, Dinner & Barat Welcome (November 20, 6:15 PM) -->
+                    <div class="relative pl-6 sm:pl-8 group">
+                        <div class="absolute -left-3 top-0 w-6 h-6 rounded-full bg-royalMaroon border-2 border-goldAccent shadow-md flex items-center justify-center text-xs text-goldAccent">
+                            <i class="fas fa-crown text-[10px]"></i>
+                        </div>
+                        <div class="bg-creamWhite border-2 border-richGold/60 rounded-2xl p-5 sm:p-6 shadow-xl hover:shadow-2xl transition-all">
+                            <div class="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 mb-2">
+                                <h4 class="font-serif text-xl sm:text-2xl font-bold text-royalMaroon">Grand Wedding Ceremony & Barat Welcome</h4>
+                                <span class="bg-royalMaroon text-lightGold border border-goldAccent/50 px-3 py-1 rounded-full text-xs font-semibold self-start">
+                                    <i class="far fa-clock mr-1"></i> Barat Welcome: 06:15 PM
+                                </span>
+                            </div>
+                            <p class="text-xs sm:text-sm font-bold text-richGold mb-2">
+                                <i class="far fa-calendar-alt mr-1"></i> Friday, 20th November 2026
+                            </p>
+                            <p class="text-xs text-gray-600 leading-relaxed mb-1">
+                                <strong>Barat Destination:</strong> Headed to Sirsi, Bahal, Bhiwani, Haryana.
+                            </p>
+                            <p class="text-xs text-gray-600 leading-relaxed">
+                                Join us for the sacred Pheras, Lunch, Dinner, and welcoming the Barat at 06:15 PM as Dr. Mamta and Er. Ankit tie the knot!
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Venue Location & Map Section (Sirsi, near Bahal, Haryana with QR Code) -->
+        <section id="venue" class="py-12 sm:py-16 px-4 sm:px-6 bg-warmCream">
+            <div class="max-w-3xl mx-auto text-center">
+                <span class="font-cinzel text-xs text-richGold font-bold tracking-widest uppercase block mb-1">Destination</span>
+                <h3 class="font-script text-3xl sm:text-5xl text-royalMaroon mb-2">Wedding Venue & Map</h3>
+                <p class="font-serif italic text-gray-600 text-xs sm:text-sm mb-8">Scan QR Code or tap below to get instant Google Maps directions</p>
+
+                <div class="bg-creamWhite border border-richGold/40 rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-xl max-w-xl mx-auto">
+                    <div class="w-12 h-12 rounded-full bg-royalMaroon text-goldAccent flex items-center justify-center mx-auto mb-4 text-xl shadow-md">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+
+                    <h4 class="font-serif text-lg sm:text-xl font-bold text-royalMaroon mb-1">Sirsi, Near Bahal, Haryana</h4>
+                    <p class="text-xs text-gray-600 font-medium mb-2">Bhiwani District, Haryana</p>
+                    <p class="text-xs text-amber-900 bg-amber-50 p-2.5 rounded-lg mb-4 border border-amber-200">
+                        <strong>Event Destination:</strong> Sirsi, near Bahal, Haryana<br>
+                        <strong>Welcome:</strong> Barat Welcome at 06:15 PM onwards
+                    </p>
+
+                    <!-- QR Code from user upload -->
+                    <div class="bg-softBeige/60 p-4 rounded-2xl border border-richGold/30 inline-block mb-6 shadow-inner">
+                        <img src="image_2e202a.png" 
+                             alt="Venue Location QR Code" 
+                             class="w-36 h-36 sm:w-44 sm:h-44 mx-auto rounded-lg shadow-sm border border-richGold/40 object-contain bg-white" 
+                             loading="lazy" />
+                        <p class="text-[11px] text-gray-500 mt-2 font-sans tracking-wide">
+                            <i class="fas fa-qrcode mr-1 text-richGold"></i> Scan with Phone Camera for Map
+                        </p>
+                    </div>
+
+                    <div class="block">
+                        <a href="https://maps.google.com/?q=Sirsi+Bahal+Haryana" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="inline-flex items-center justify-center gap-2 w-full sm:w-auto bg-gradient-to-r from-royalMaroon to-deepBurgundy hover:from-deepBurgundy hover:to-royalMaroon text-lightGold border border-goldAccent/40 px-6 py-3 rounded-full font-medium text-xs sm:text-sm shadow-md transition-transform hover:scale-105 active:scale-95">
+                            <i class="fas fa-directions text-base sm:text-lg"></i>
+                            <span>Open Google Maps Location</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom Wedding Logo & Monogram Section (Bride First: M & A) -->
+        <section id="logo-crest" class="py-12 sm:py-16 px-4 sm:px-6 bg-gradient-to-b from-softBeige/40 via-warmCream to-creamWhite border-t border-richGold/30">
+            <div class="max-w-xl mx-auto text-center">
+                <span class="font-cinzel text-xs text-richGold font-bold tracking-widest uppercase block mb-1">The Wedding Crest</span>
+                <h3 class="font-script text-3xl sm:text-5xl text-royalMaroon mb-2">Dr. Mamta & Er. Ankit</h3>
+                <p class="font-serif italic text-gray-600 text-xs sm:text-sm mb-8">"Bound by love, blessed by destiny"</p>
+
+                <!-- Custom Elegant Monogram Logo Card -->
+                <div class="bg-creamWhite border-2 border-richGold/60 rounded-2xl sm:rounded-3xl p-6 sm:p-8 shadow-2xl max-w-sm mx-auto relative overflow-hidden">
+                    <div class="absolute inset-0 opacity-5 bg-[radial-gradient(#C5A059_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                    
+                    <div class="relative z-10 flex flex-col items-center py-4 sm:py-6">
+                        <!-- Crown Ornament -->
+                        <div class="text-richGold text-2xl sm:text-3xl mb-3">
+                            <i class="fas fa-crown"></i>
+                        </div>
+
+                        <!-- Intertwined Capital M & A Initials -->
+                        <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full border-2 border-richGold flex items-center justify-center bg-softBeige/50 shadow-inner mb-4">
+                            <span class="font-script text-4xl sm:text-5xl gold-gradient-text tracking-tighter">M & A</span>
+                        </div>
+
+                        <h4 class="font-cinzel text-xs sm:text-sm font-bold tracking-widest text-royalMaroon uppercase mb-1">Auspicious Union</h4>
+                        <div class="w-12 h-0.5 bg-richGold mx-auto my-2"></div>
+                        <p class="text-xs font-serif text-gray-600">November 20, 2026</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Elegant Footer -->
+        <footer class="bg-royalMaroon text-lightGold py-8 sm:py-10 px-4 sm:px-6 text-center border-t-2 border-goldAccent/40">
+            <div class="max-w-2xl mx-auto space-y-2.5 sm:space-y-3">
+                <p class="font-cinzel text-[11px] sm:text-xs tracking-widest text-richGold uppercase">॥  वसुधैव कुटुम्बकम्  ॥</p>
+                <h4 class="font-script text-2xl sm:text-4xl text-lightGold">Dr. Mamta & Er. Ankit</h4>
+                <p class="text-[11px] sm:text-xs text-lightGold/80 tracking-wider font-serif px-2">
+                    November 20, 2026 • Sirsi, near Bahal, Haryana
+                </p>
+                <div class="w-16 h-0.5 bg-richGold/40 mx-auto my-3 sm:my-4"></div>
+                <p class="text-[10px] sm:text-[11px] text-lightGold/60">
+                    Crafted with love for the wedding celebration of Mamta & Ankit
+                </p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Audio Player Controls
+        const musicToggleBtn = document.getElementById('musicToggleBtn');
+        const musicIcon = document.getElementById('musicIcon');
+        const weddingMusic = document.getElementById('weddingMusic');
+        let isPlaying = false;
+
+        musicToggleBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                weddingMusic.pause();
+                musicIcon.className = 'fas fa-music text-lg sm:text-xl';
+                musicToggleBtn.classList.remove('animate-pulse');
+            } else {
+                weddingMusic.play().then(() => {
+                    musicIcon.className = 'fas fa-pause text-lg sm:text-xl';
+                    musicToggleBtn.classList.add('animate-pulse');
+                }).catch(err => {
+                    console.log('Audio autoplay blocked by browser:', err);
+                });
+            }
+            isPlaying = !isPlaying;
+        });
+
+        // Live Countdown Clock Logic to Nov 20, 2026
+        const weddingDate = new Date("November 20, 2026 18:00:00").getTime();
+
+        function updateCountdown() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            if (distance < 0) {
+                document.getElementById("days").innerText = "00";
+                document.getElementById("hours").innerText = "00";
+                document.getElementById("minutes").innerText = "00";
+                document.getElementById("seconds").innerText = "00";
+                return;
+            }
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerText = days < 10 ? "0" + days : days;
+            document.getElementById("hours").innerText = hours < 10 ? "0" + hours : hours;
+            document.getElementById("minutes").innerText = minutes < 10 ? "0" + minutes : minutes;
+            document.getElementById("seconds").innerText = seconds < 10 ? "0" + seconds : seconds;
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+    </script>
+</body>
+</html>
